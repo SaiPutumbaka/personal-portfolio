@@ -8,3 +8,5 @@ out/
 # local env files
 .env
 .env.local
+# TypeScript incremental build info
+tsconfig.tsbuildinfo
