@@ -4,31 +4,34 @@ import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
-    tag: "Data Analytics",
-    title: "Dashboards & Data Quality at GPC",
+    tag: "Deep Learning",
+    title: "Customer Churn Prediction",
     blurb:
-      "At Genuine Parts Company (NAPA Auto Parts), standardized data quality across 500+ franchise locations and built Power BI dashboards leadership uses to track risk, incidents, and compliance KPIs. Automated data pipelines and system health checks improved traceability and cut downtime.",
-    stack: ["Power BI", "Python", "SQL", "R", "Pipelines"],
+      "A deep learning model that predicts customer churn using a Multi-Layer Perceptron (MLP) and Decision Tree, served through a clean, interactive Streamlit dashboard. Users can adjust customer attributes and instantly see churn probability driven by the trained models.",
+    stack: ["Python", "TensorFlow", "Scikit-learn", "Streamlit", "Pandas"],
+    link: "https://churn-prediction-dashboard-sai.streamlit.app/",
   },
   {
-    tag: "IT Consulting",
-    title: "Systems Integration at HB Global",
+    tag: "Agentic AI",
+    title: "AI Resume Strategist",
     blurb:
-      "Built and governed structured data repositories for 2,000+ applicants and project records across regulated client environments. Integrated ATS, ServiceNow, and SAP-aligned systems to support traceable audits and onboarding — and shipped operational dashboards for project risk and vendor performance.",
-    stack: ["ServiceNow", "SAP", "ATS", "Power BI", "Compliance"],
+      "A multi-agent system that tailors resume bullet points to specific job postings for ATS optimization. Agents coordinate to rewrite content, applying delta patching and regex cleaning to produce precise, structure-preserving edits — all wrapped in a Streamlit interface.",
+    stack: ["Python", "Multi-Agent", "LLMs", "Regex", "Streamlit"],
+    link: "https://ai-resume-strategist.streamlit.app/",
   },
   {
-    tag: "Financial Analytics",
-    title: "Cost, Pricing & Market Analysis",
+    tag: "Backend Development",
+    title: "SecureOps REST API",
     blurb:
-      "Built Excel-based proposal and cost-tracking models used by leadership to assess pricing, risk, and regulatory exposure across customer jobs. Authored a SWOT / FDI advisement proposal for car-sales expansion into Canada and visualized regional performance with Tableau heatmaps.",
-    stack: ["Excel", "PowerPoint", "Power BI", "Tableau", "SWOT / FDI"],
+      "A REST API built with .NET and C# that handles data-entry communication between a frontend user and a backend database. Provides clean, secure endpoints for create/read operations with structured persistence. Full source available on GitHub.",
+    stack: [".NET", "C#", "REST API", "SQL", "Entity Framework"],
+    link: "https://github.com/SaiPutumbaka/SecureOpsAPI",
   },
   {
     tag: "Web Development",
     title: "Modern Web · This Portfolio",
     blurb:
-      "Production-grade Next.js + TypeScript builds with motion-heavy UI and 3D scenes — including this immersive Atlanta portfolio (React Three Fiber, Framer Motion, Tailwind). Also: Activity Planet, an application-development project currently in-progress.",
+      "Production-grade Next.js + TypeScript builds with motion-heavy UI and 3D scenes — including this immersive Atlanta portfolio (React Three Fiber, Framer Motion, Tailwind).",
     stack: ["Next.js", "TypeScript", "React Three Fiber", "Tailwind", "Framer Motion"],
   },
 ];
@@ -63,6 +66,16 @@ export default function ProjectsDistrict() {
               </span>
             ))}
           </div>
+          {p.link && (
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1 font-mono text-[12px] tracking-wide text-atl-peach hover:text-white transition"
+            >
+              View Project <span aria-hidden>→</span>
+            </a>
+          )}
         </motion.article>
       ))}
     </div>
